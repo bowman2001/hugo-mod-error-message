@@ -1,3 +1,3 @@
-# hugo-mod-
+# hugo-mod-error-message
 
-Hugo module 
+Hugo module for writing error messages to the console.
