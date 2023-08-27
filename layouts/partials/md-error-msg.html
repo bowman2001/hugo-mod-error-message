@@ -25,5 +25,5 @@
 {{- else if eq $errorLevel "error" }}
     {{- errorf $msg }}
 {{- else }}
-    {{- errorf "%q: Unavailable error level %q in call from %q in %q. Possible are 'ignore', 'warning', and 'error'" $name $errorLevel $caller $ctx }}
+    {{- errorf "%s: Unavailable error level %q in call from %q. See %s. Possible are 'ignore', 'warning', and 'error'" $name $errorLevel $caller $path }}
 {{- end }}
