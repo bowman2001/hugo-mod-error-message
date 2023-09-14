@@ -5,7 +5,7 @@
 {{- $errorMsg := .errorMsg }}
 {{- $errorLevel := .errorLevel }}
 
-{{- $msg := printf "%s: %s." $caller $errorMsg }}
+{{- $msg := printf "%s: %s" $caller $errorMsg }}
 {{- if eq $errorLevel "ignore" }}
 {{- else if eq $errorLevel "warning" }}
     {{- warnf $msg }}                

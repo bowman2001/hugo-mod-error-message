@@ -18,7 +18,7 @@
     {{- end }}
 {{- end }}
 
-{{- $msg := printf "%s: %s. See %s." $caller $errorMsg $path }}
+{{- $msg := printf "%s: %s See %s." $caller $errorMsg $path }}
 {{- if eq $errorLevel "ignore" }}
 {{- else if eq $errorLevel "warning" }}
     {{- warnf $msg }}                
