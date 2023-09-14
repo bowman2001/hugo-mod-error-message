@@ -6,7 +6,7 @@ disableKinds:
   - "taxonomy"
 
 params:
-  errorLevel: warning # ignore, warning, or error
+  errorLevel: "warning"
 
 module:
  imports:

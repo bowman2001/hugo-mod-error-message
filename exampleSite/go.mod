@@ -1,6 +1,6 @@
 module github.com/bowman2001/hugo-mod-error-message/exampleSite
 
-go 1.21.0
+go 1.21
 
 replace github.com/bowman2001/hugo-mod-error-message => ../
 

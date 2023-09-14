@@ -8,7 +8,7 @@
 <h1>{{ .Title | site.Home.RenderString }}</h1>
 {{ .Content }}
 {{- $msg := "Error test message" }}
-{{- $el := site.Params.errorLevel }}
-{{- partial "md-error-msg" (dict "caller" "exampleSite" "ctx" . "errorMsg" $msg "errorLevel" $el ) }}
+{{- $el := (partial "error-level" (dict "caller" "exampleSite" "level" site.Params.errorLevel "config" "site config" )) }}
+{{- partial "md-error-msg" (dict "caller" "exampleSite" "ctx" . "errorMsg" $msg "errorLevel" $el) }}
 </body>
 </html>
