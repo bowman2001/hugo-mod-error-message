@@ -1,12 +1,9 @@
 baseURL: 'http://example.org/'
 languageCode: en-us
-title: Hugo-mod- example site
+title: Hugo-mod-error-message example site
 
 disableKinds:
   - "taxonomy"
-
-params:
-  errorLevel: "warning"
 
 module:
  imports:

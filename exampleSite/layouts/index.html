@@ -7,8 +7,11 @@
 <body>
 <h1>{{ .Title | site.Home.RenderString }}</h1>
 {{ .Content }}
-{{- $msg := "Error test message" }}
-{{- $el := (partial "error-level" (dict "caller" "exampleSite" "level" site.Params.errorLevel "config" "site config" )) }}
-{{- partial "md-error-msg" (dict "caller" "exampleSite" "ctx" . "errorMsg" $msg "errorLevel" $el) }}
+{{- partial "error-msg" (dict "caller" "exampleSite – error-msg" "errorMsg" "Ignore this." "errorLevel" "ignore" ) }}
+{{- partial "error-msg" (dict "caller" "exampleSite – error-msg" "errorMsg" "Warning test." "errorLevel" "warning" ) }}
+{{- partial "error-msg" (dict "caller" "exampleSite – error-msg" "errorMsg" "Error test." "errorLevel" "error" ) }}
+{{- partial "md-error-msg" (dict "caller" "exampleSite – md-error-msg" "ctx" . "errorMsg" "Ignore this." "errorLevel" "ignore" ) }}
+{{- partial "md-error-msg" (dict "caller" "exampleSite – md-error-msg" "ctx" . "errorMsg" "Warning test." "errorLevel" "warning" ) }}
+{{- partial "md-error-msg" (dict "caller" "exampleSite – md-error-msg" "ctx" . "errorMsg" "Error test." "errorLevel" "error" ) }}
 </body>
 </html>
