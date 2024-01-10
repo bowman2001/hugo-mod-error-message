@@ -2,7 +2,7 @@
 {{ $ctx := . }}
 {{ $path := "" }}
 
-{{ with .Page.File }}
+{{ with $ctx.Page.File }}
     {{ $path = .Path }}
 {{ else }}
     {{ with .Path }}

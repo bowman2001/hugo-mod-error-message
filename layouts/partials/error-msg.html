@@ -8,9 +8,9 @@
 {{- $msg := "" }}
 {{- with .ctx }}
     {{- $path := partial "error-path" . }}
-    {{- $msg := printf "%s: %s See %s." $caller $errorMsg $path }}
+    {{- $msg = printf "%s: %s See %s." $caller $errorMsg $path }}
 {{- else }}
-    {{- $msg := printf "%s: %s" $caller $errorMsg }}
+    {{- $msg = printf "%s: %s" $caller $errorMsg }}
 {{- end }}
 
 {{- if eq $errorLevel "ignore" }}

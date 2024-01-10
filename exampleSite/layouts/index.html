@@ -7,11 +7,11 @@
 <body>
 <h1>{{ .Title | site.Home.RenderString }}</h1>
 {{ .Content }}
-{{- partial "error-msg" (dict "caller" "exampleSite – error-msg" "errorMsg" "Ignore this." "errorLevel" "ignore" ) }}
-{{- partial "error-msg" (dict "caller" "exampleSite – error-msg" "errorMsg" "Warning test." "errorLevel" "warning" ) }}
-{{- partial "error-msg" (dict "caller" "exampleSite – error-msg" "errorMsg" "Error test." "errorLevel" "error" ) }}
-{{- partial "md-error-msg" (dict "caller" "exampleSite – md-error-msg" "ctx" . "errorMsg" "Ignore this." "errorLevel" "ignore" ) }}
-{{- partial "md-error-msg" (dict "caller" "exampleSite – md-error-msg" "ctx" . "errorMsg" "Warning test." "errorLevel" "warning" ) }}
-{{- partial "md-error-msg" (dict "caller" "exampleSite – md-error-msg" "ctx" . "errorMsg" "Error test." "errorLevel" "error" ) }}
+{{- partial "error-msg" (dict "caller" "exampleSite" "errorMsg" "Ignore this." "errorLevel" "ignore" ) }}
+{{- partial "error-msg" (dict "caller" "exampleSite" "errorMsg" "Warning test." "errorLevel" "warning" ) }}
+{{- partial "error-msg" (dict "caller" "exampleSite" "errorMsg" "Error test." "errorLevel" "error" ) }}
+{{- partial "error-msg" (dict "caller" "exampleSite" "ctx" . "errorMsg" "Ignore this." "errorLevel" "ignore" ) }}
+{{- partial "error-msg" (dict "caller" "exampleSite" "ctx" . "errorMsg" "Warning test." "errorLevel" "warning" ) }}
+{{- partial "error-msg" (dict "caller" "exampleSite" "ctx" . "errorMsg" "Error test." "errorLevel" "error" ) }}
 </body>
 </html>
