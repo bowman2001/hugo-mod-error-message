@@ -1,9 +1,7 @@
 public
+exampleSite/public
 resources/_gen
 node_modules
 .idea
 .vscode
 .hugo*
-
-# Go workspace file
-go.work

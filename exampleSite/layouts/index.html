@@ -7,6 +7,9 @@
 <body>
 <h1>{{ .Title | site.Home.RenderString }}</h1>
 {{ .Content }}
+{{- partial "error-msg" (dict "errorMsg" "Ignore this." "errorLevel" "ignore" ) }}
+{{- partial "error-msg" (dict "errorMsg" "Warning test." "errorLevel" "warning" ) }}
+{{- partial "error-msg" (dict "errorMsg" "Error test." "errorLevel" "error" ) }}
 {{- partial "error-msg" (dict "caller" "exampleSite" "errorMsg" "Ignore this." "errorLevel" "ignore" ) }}
 {{- partial "error-msg" (dict "caller" "exampleSite" "errorMsg" "Warning test." "errorLevel" "warning" ) }}
 {{- partial "error-msg" (dict "caller" "exampleSite" "errorMsg" "Error test." "errorLevel" "error" ) }}
